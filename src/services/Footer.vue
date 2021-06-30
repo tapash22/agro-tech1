@@ -1,0 +1,79 @@
+<template>
+<div class="footer">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Agrotech-GlobalBD</h3>
+    </div>
+    <div class="col-md-6">
+      <address>House:66&nbsp;Road:11&nbsp;Merul-badda&nbsp;,Dhaka&nbsp;,Bangladesh</address>
+      <p>Email:gvetpharma.gmail.com &nbsp;Mobile:+8801877136747 &nbsp; Facebook:greenvetpharma</p>
+    </div>
+    <div class="col-md-3 name">
+      <p>Name of MD</p>
+    </div>
+    <div class="text">
+      <p>All right reserved in <span>Agrotech-GlobalBD</span></p>
+    </div>
+  </div>
+</div>
+</template>
+
+<style scoped>
+.footer {
+  background: #fff;
+   text-align: center;
+   justify-content: center;
+}
+.row{
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+}
+.col-md-3 {
+  text-align: center;
+  color: green;
+  padding-top: 20px;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.col-md-6 {
+  text-align: left;
+  padding-top: 20px;
+}
+.col-md-6 address {
+  margin-top: 15px;
+  
+  
+}
+.name{
+    text-align: left;
+}
+.name p {
+  margin-top: 30px;
+}
+.text {
+  text-align: center;
+  font-size: 0.9rem;
+ 
+}
+.text span {
+  font-size: 1.2rem;
+  font-weight: 700; 
+}
+
+@media only screen and (max-width: 767px){
+  .col-md-6{
+    text-align: center;
+  }
+  .name{
+    text-align: center;
+  }
+  .text{
+    text-align: center;
+  }
+
+}
+</style>

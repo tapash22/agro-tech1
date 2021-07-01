@@ -6,7 +6,7 @@
     </div>
     <div class="col-md-6">
       <address>House:66&nbsp;Road:11&nbsp;Merul-badda&nbsp;,Dhaka&nbsp;,Bangladesh</address>
-      <p>Email:gvetpharma.gmail.com &nbsp;Mobile:+8801877136747 &nbsp; Facebook:greenvetpharma</p>
+      <p>Email:gvetpharma.gmail.com &nbsp;Mobile:+8801674345763 &nbsp; Facebook:facebook</p>
     </div>
     <div class="col-md-3 name">
       <p>Name of MD</p>

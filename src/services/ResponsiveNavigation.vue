@@ -46,9 +46,6 @@ export default {
       nav.contains("active") ? nav.remove("active") : nav.add("active");
     },
 
-    updateScroll() {
-      this.scrollPosition = window.scrollY;
-    },
   },
 };
 </script>

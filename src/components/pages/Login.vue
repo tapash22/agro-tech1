@@ -27,13 +27,11 @@
 </template>
 
 <style scoped>
-.login {
-  background-image: url("../../assets/login.jpg");
-  background-position: center;
-  background-size: cover;
-}
+
 .row {
+  height: 450px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .col-md-6 {
   width: 600px;
@@ -41,10 +39,14 @@
   margin-top: 60px;
   box-shadow: 5px 5px 5px rgb(62, 62, 141);
   z-index: 1;
+  background: #fff;
+  background-image: url('../../assets/login.jpg');
+  background-position: center;
+  background-size: cover;
 }
 h2 {
   padding-top: 40px;
-  color: rgb(45, 206, 131);
+  color: #000;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;

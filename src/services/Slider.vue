@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="sld">
     <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i">
+      <div class="sd" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
     </transition-group>
@@ -51,6 +51,11 @@ export default {
 </script>
 
 <style scoped>
+.sld{
+  padding: 0;
+  margin: 0;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.9s ease;
@@ -69,8 +74,8 @@ export default {
 }
 
 img {
-  height:600px;
-  width:100%
+  height:400px;
+  width:1100px;
 }
 
 .prev, .next {
@@ -78,7 +83,6 @@ img {
   position: absolute;
   top: 40%;
   width: auto;
-  padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 2.5rem;
@@ -89,14 +93,11 @@ img {
 }
 
 .next {
-  right: 0;
+  right: 10px;
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.9);
-}
 </style>

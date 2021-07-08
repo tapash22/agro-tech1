@@ -1,21 +1,20 @@
 <template>
   <div class="products">
-    <h2>Our Product</h2>
-    <div class="row">
-      <div
-        class="col-md-4 my-2"
-        v-for="(pdc, index) in products"
-        :key="pdc.id"
-        :index="index"
-      >
-        <div class="box">
-          <div class="header">
-            <h3>{{ pdc.title }}</h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="pdt">
+            <div class="row">
+              <div class="col-md-6" v-for="pds in products" :key="pds.id">
+                <div class="card">
+                  <img :src="pds.img"/>
+                </div>
+              </div>
+            </div>
           </div>
-          <img :src="pdc.img" />
-          <div class="footer">
-            <button class="btn btn-primary">Details</button>
-          </div>
+        </div>
+        <div class="col-md-4">
+          <p>Select any product for detail</p>
         </div>
       </div>
     </div>
@@ -29,89 +28,80 @@ export default {
       products: [
         {
           id: 1,
-          title: "product-name",
           img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
           price: "1000",
         },
         {
           id: 2,
-          title: "product-name",
           img: "https://i.postimg.cc/BvZr8MKF/b.jpg",
           price: "1000",
         },
         {
           id: 3,
-          title: "product-name",
           img: "https://i.postimg.cc/JhyQdXwg/c.jpg",
           price: "1000",
         },
         {
           id: 4,
-          title: "product-name",
           img: "https://i.postimg.cc/8cbdrBWF/d.jpg",
           price: "1000",
         },
         {
           id: 5,
-          title: "product-name",
           img: "https://i.postimg.cc/pX2JM4bK/e.jpg",
           price: "1000",
         },
         {
           id: 6,
-          title: "product-name",
           img: "https://i.postimg.cc/NjF85X0M/f.jpg",
           price: "1000",
         },
         {
           id: 7,
-          title: "product-name",
           img: "https://i.postimg.cc/RF5wsbL6/g.jpg",
           price: "1000",
         },
         {
           id: 8,
-          title: "product-name",
           img: "https://i.postimg.cc/QNqcmm9C/h.jpg",
           price: "1000",
         },
         {
           id: 9,
-          title: "product-name",
           img: "https://i.postimg.cc/xTTM4mMR/i.jpg",
           price: "1000",
         },
         {
           id: 10,
-          title: "product-name",
           img: "https://i.postimg.cc/BbhL0hHC/k.jpg",
           price: "1000",
         },
         {
           id: 11,
-          title: "product-name",
           img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
           price: "1000",
         },
         {
           id: 12,
-          title: "product-name",
           img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
           price: "1000",
         },
       ],
     };
   },
-  mounted () {
-  window.scrollTo(0, 0);
-},
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 <style scoped>
-.products{
-  background-image: url('../../assets/product.jpg');
-  background-position: center;
-  padding-bottom: 50px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: rgb(238, 234, 234);
+  padding-top: 80px;
 }
 h2 {
   margin-top: 60px;
@@ -123,59 +113,51 @@ h2 {
   text-transform: uppercase;
 }
 .row {
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+ 
 }
-.col-md-4 {
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-}
-.box {
-  border: 2px solid rgb(213, 216, 15);
-  justify-content: center;
-  width: 300px;
-  height: 300px;
-  margin: 5px 10px;
-  overflow: hidden;
-  filter: grayscale(100%);
-  transition: 0.3s all;
-}
-.header {
-  padding: 10px;
+.col-md-8 {
+  width: 60%;
   background: #fff;
-  height: 50px;
+  margin-bottom: 20px;
 }
-h3 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #000;
-  text-transform: uppercase;
+.pdt .row{
+  width: 100%;
+  position:inherit;
+  justify-content: space-around;
 }
-img {
-  width: 295px;
+.pdt .row .col-md-6{
+  width: 40%;
   height: 200px;
-  transition: 0.3s all;
+  padding: 10px;
+  margin: 5px;
+ 
 }
-img:hover {
+.pdt .row .col-md-6 img{
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: 0.8s ease;
+  cursor: pointer;
+}
+.pdt .row .col-md-6 img:hover{
   transform: scale(1.1);
 }
-.box:hover {
-  filter: grayscale(0);
-}
-p {
-  color: #000;
-  font-size: 1rem;
-  font-weight: 500;
-}
-button {
-  width: 100%;
-  height: 50px;
-}
 
-@media only screen and (max-width: 767px) {
-  .col-md-4 {
-    margin-left: 10%;
-  }
+.col-md-4 {
+  width: 40%;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.col-md-4 p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 5px;
+  text-align: center;
+  margin-top: 40%;
 }
 </style>

@@ -1,30 +1,38 @@
 <template>
-<div class="footer">
-  <div class="row">
-    <div class="col-md-3">
-      <h3>Agrotech-GlobalBD</h3>
-    </div>
-    <div class="col-md-6">
-      <address>House:40&nbsp;Road:1&nbsp;Bonosree,&nbsp;,Dhaka&nbsp;,Bangladesh</address>
-      <p>Email:tapasp263@.gmail.com &nbsp;Mobile:+8801674345763 &nbsp; Facebook:facebook</p>
-    </div>
-    <div class="col-md-3 name">
-      <p>Name of MD</p>
-    </div>
-    <div class="text">
-      <p>All right reserved in <span>Agrotech-GlobalBD</span></p>
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>Agrotech Global BD Nutrition</h3>
+      </div>
+      <div class="col-md-6">
+        <address>
+          Shamol Chya house , Road # 16, Holding number # 28,<br> 
+          Rupnagar, Mirpur, Dhaka 1216, Bangladesh.
+        </address>
+        <p>
+          Email:tapasp263@.gmail.com &nbsp;Mobile:+8801674345763 &nbsp;
+          Facebook:facebook
+        </p>
+      </div>
+      <div class="col-md-3 name">
+        <p>Name of MD</p>
+      </div>
+      <div class="text">
+        <p>
+          All right reserved in &copy; <span>Agrotech Global BD Nutrition</span>
+        </p>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
 .footer {
   background: #fff;
-   text-align: center;
-   justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
-.row{
+.row {
   justify-content: center;
   align-items: center;
   padding-left: 100px;
@@ -45,11 +53,9 @@ h3 {
 }
 .col-md-6 address {
   margin-top: 15px;
-  
-  
 }
-.name{
-    text-align: left;
+.name {
+  text-align: left;
 }
 .name p {
   margin-top: 30px;
@@ -57,23 +63,21 @@ h3 {
 .text {
   text-align: center;
   font-size: 0.9rem;
- 
 }
 .text span {
   font-size: 1.2rem;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
-@media only screen and (max-width: 767px){
-  .col-md-6{
+@media only screen and (max-width: 767px) {
+  .col-md-6 {
     text-align: center;
   }
-  .name{
+  .name {
     text-align: center;
   }
-  .text{
+  .text {
     text-align: center;
   }
-
 }
 </style>

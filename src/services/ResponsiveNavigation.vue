@@ -1,29 +1,33 @@
 <template>
-  <nav class="fixed-top" :style="{ background: background || '#333' }">
-    <ul :style="{ background: background || '#333' }" ref="nav">
-      <figure class="image-logo" @click="toggleNav">
-        <img :src="imagePath" height="40px" width="40px" />
-      </figure>
-      <li
-        v-for="(link, index) in navLinks"
-        :key="index"
-        @mouseenter="
-          $event.currentTarget.style.background = hoverBackground || '#999'
-        "
-        @mouseleave="
-          $event.currentTarget.style.background = background || '#333'
-        "
-      >
-        <router-link :to="link.path" :style="{ color: linkColor || '#DDD' }">
-          {{ link.text }}
-          <i :class="link.icon" />
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav class="fixed-top" :style="{ background: background || '#333' }">
+      <ul :style="{ background: background || '#333' }" ref="nav">
+        <figure class="image-logo" @click="toggleNav">
+          <img :src="imagePath" height="40px" width="40px" />
+        </figure>
+        <li
+          v-for="(link, index) in navLinks"
+          :key="index"
+          @mouseenter="
+            $event.currentTarget.style.background = hoverBackground || '#999'
+          "
+          @mouseleave="
+            $event.currentTarget.style.background = background || '#333'
+          "
+        >
+          <router-link :to="link.path" :style="{ color: linkColor || '#DDD' }">
+            {{ link.text }}
+            <i :class="link.icon" />
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+    <!-- <Details /> -->
+  </div>
 </template>
 
 <script>
+// import Details from "./Details.vue";
 export default {
   props: [
     "navLinks",
@@ -32,6 +36,9 @@ export default {
     "hoverBackground",
     "imagePath",
   ],
+  components: {
+    // Details,
+  },
   data() {
     return {
       scrollPosition: null,
@@ -45,17 +52,17 @@ export default {
       const nav = this.$refs.nav.classList;
       nav.contains("active") ? nav.remove("active") : nav.add("active");
     },
-
   },
 };
 </script>
 
 <style scoped>
-nav {
-  height: 60px;
+.container {
   width: 100%;
-  box-shadow: 2px 2px 2px #ccc;
+  height: 100%;
+  background: rgb(238, 234, 234);
 }
+
 .change_color {
   background-color: red;
 }
@@ -84,6 +91,7 @@ a {
   flex-direction: row-reverse;
   align-items: center;
   font-size: 1.2rem;
+  color: green;
 }
 i {
   margin-right: 10px;
@@ -93,12 +101,13 @@ li {
   list-style-type: none;
   padding: 10px 20px;
 }
+
 @media screen and (max-width: 759px) {
   ul {
     position: absolute;
     width: 300px;
     flex-direction: column;
-    left: -240px;
+    left: -300px;
     transition: 300ms ease all;
     top: 60px;
   }

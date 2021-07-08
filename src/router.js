@@ -5,6 +5,7 @@ import Products from './components/pages/Products.vue';
 import Gallery from './components/pages/Gallery.vue';
 import Partners from './components/pages/Partners.vue';
 import Login from './components/pages/Login.vue';
+import Admin from './components/pages/Admin.vue';
 
 
 const routes = [
@@ -14,6 +15,7 @@ const routes = [
     { path:'/gallery', component:Gallery},
     { path:'/partners', component:Partners},
     { path:'/login', component:Login},
+    { path:'/admin' , component:Admin },
 ];
 
 const router = createRouter({

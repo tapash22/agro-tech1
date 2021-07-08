@@ -7,7 +7,10 @@
     hoverBackground="#ddd"
   />
   <div id="app">
-    <transition mode="out-in" enter-active-class="animate__animated animate__fadeIn" >
+    <transition
+      mode="out-in"
+      enter-active-class="animate__animated animate__fadeIn"
+    >
       <router-view />
     </transition>
   </div>
@@ -38,6 +41,11 @@ export default {
         text: "Products",
         path: "/products",
         icon: "fa fa-product-hunt",
+        children: [
+          { text: "Products1", path: "/products", icon: "fa fa-product-hunt" },
+          { text: "Products2", path: "/products", icon: "fa fa-product-hunt" },
+          { text: "Products3", path: "/products", icon: "fa fa-product-hunt" },
+        ],
       },
       {
         text: "Gallery",
@@ -66,15 +74,9 @@ figure {
   margin-inline-start: 10px;
   margin-inline-end: 0;
 }
-body {
-  margin: 0;
-}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  background: rgb(238, 234, 234);
 }
 #nav {
   padding: 30px;

@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="footer">
     <div class="row">
       <div class="col-md-3">
@@ -23,7 +22,6 @@
           All right reserved in &copy; <span>Agrotech Global BD Nutrition</span>
         </p>
       </div>
-=======
 <div class="footer">
   <div class="row">
     <div class="col-md-3">
@@ -38,7 +36,6 @@
     </div>
     <div class="text">
       <p>All right reserved in <span>Agrotech-GlobalBD</span></p>
->>>>>>> 544fd9e2f02a013e81f09adba7d33fca418f83b5
     </div>
   </div>
 </template>

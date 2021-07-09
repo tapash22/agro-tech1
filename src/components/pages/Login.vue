@@ -18,7 +18,7 @@
             />
           </div>
           <div class="mt-3">
-            <button type="submit" class="btn btn-lg btn-primary">Login</button>
+            <button type="submit" class="btn btn-lg btn-primary" @click.prevent="onClick">Login</button>
           </div>
         </form>
       </div>
@@ -31,10 +31,21 @@ export default {
     mounted() {
     window.scrollTo(0, 0);
   },
+  methods:{
+    onClick(){
+      this.$router.push('/admin');
+    }
+  }
 }
 </script>
 
 <style scoped>
+.login{
+    background-image: url('../../assets/login.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
 
 .row {
   height: 450px;
@@ -48,9 +59,6 @@ export default {
   box-shadow: 5px 5px 5px rgb(62, 62, 141);
   z-index: 1;
   background: #fff;
-  background-image: url('../../assets/login.jpg');
-  background-position: center;
-  background-size: cover;
 }
 h2 {
   padding-top: 40px;

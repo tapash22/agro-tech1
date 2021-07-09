@@ -5,17 +5,16 @@
         <div class="icon">
           <i class="fa fa-user-o" aria-hidden="true"></i>
         </div>
-        <address>
-          MD.Admin
-          <span>AgroGlobalBd</span>
-        </address>
+        <address>Admin<br /></address>
       </div>
       <ul>
-        <li><a href="#">USER</a></li>
-        <li><a href="#">Product</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Add event</a></li>
+        <li><a href="#">WELCOME</a></li>
+        <li><a href="#">TO</a></li>
+        <li><a href="#">OUR</a></li>
+        <li><a href="#">AGROtech</a></li>
+        <li><a href="#">Global </a></li>
+        <li><a href="#">BD</a></li>
+        <li><a href="#">Nutrition</a></li>
       </ul>
     </div>
     <div class="sub-header">
@@ -40,10 +39,61 @@
           <h3>User detail</h3>
         </div>
       </div>
+      <!--gallrey -->
       <div class="row">
-        <div class="col-md-12">
-          <h3>User List</h3>
-          <ul></ul>
+        <div class="col-md-6 form">
+          <h3>Gallery</h3>
+          <form>
+            <div class="form-group">
+              <label>Event name</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="custom-file mt-2">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="customFileInput"
+                aria-describedby="customFileInput"
+              />
+            </div>
+            <div class="my-3">
+              <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 details">
+          <h3>Gallery List</h3>
+        </div>
+      </div>
+
+      <!-- product -->
+      <div class="row">
+        <div class="col-md-6 form">
+          <h3>Add Product</h3>
+          <form>
+            <div class="form-group">
+              <label>Product Name</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label>Company name</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="custom-file mt-2">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="customFileInput"
+                aria-describedby="customFileInput"
+              />
+            </div>
+            <div class="my-3">
+              <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 details">
+          <h3>Product-list</h3>
         </div>
       </div>
     </div>
@@ -53,18 +103,19 @@
 <style scoped>
 .admin {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: space-around;
 }
 .header {
-  padding-top: 80px;
+  padding-top: 150px;
   width: 250px;
-  height: 100%;
+  height: 170vh;
   background: rgb(8, 1, 24);
   display: flex;
   flex-direction: column;
+  left: 0;
 }
 .card {
   width: 200px;
@@ -105,7 +156,7 @@ span {
   text-transform: uppercase;
 }
 ul {
-  margin-top: 20px;
+  margin-top: 100px;
   padding: 0;
 }
 ul li {
@@ -120,7 +171,7 @@ ul li {
 ul li a {
   text-decoration: none;
   padding: 5px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: #fff;
 }
@@ -130,7 +181,7 @@ ul li:hover {
 .sub-header {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background: rgb(226, 223, 223);
   padding-top: 50px;
 }
@@ -144,7 +195,7 @@ ul li:hover {
 .sub-header .form {
   width: 48%;
   height: 300px;
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
   background: #fff;
   margin: 0 5px;
@@ -153,7 +204,7 @@ ul li:hover {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
 }
 .sub-header .form label {
@@ -174,16 +225,15 @@ ul li:hover {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
-
 }
-.sub-header .col-md-12{
+.sub-header .col-md-12 {
   display: flex;
   justify-content: center;
   width: 96%;
   height: 100%;
   background: #fff;
 }
-.sub-header .col-md-12 h3{
+.sub-header .col-md-12 h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;

@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="text">
-      <p>"Agrotech Global BD Nutrition পক্ষ থেকে সবাই কে জানাই ঈদুল আযহা শুভেচ্ছা"</p>
+      <p>"Quality is foremost vigor"</p>
     </div>
   </div>
 </template>
@@ -10,17 +10,18 @@
 .row {
   position: fixed;
   right: 0;
-  width: 60%;
+  width: 700px;
   margin-top: -15px;
   height: 35px;
-  background: rgb(3, 77, 7);
+  background:green;
   margin-left: 2px;
   z-index: 1;
+  border-bottom-left-radius: 90%;
 }
 .text {
   position: relative;
   overflow: hidden;
-  border-right: 1px solid #fff;
+  margin-left: 25%;
   padding: 5px;
 }
 .text p {
@@ -35,9 +36,6 @@
   transform: translateX(100%);
   animation: text 10s linear infinite;
 }
-.details {
-    display:none;
-}
 
 @keyframes text {
   0% {
@@ -49,15 +47,11 @@
 }
 @media only screen and (max-width: 767px) {
   .row {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  background: rgb(3, 77, 7);
-  z-index: 1;
-}
-  .details {
-   display: none;
+    position: fixed;
+    width: 600px;
+    height: 35px;
+    background: rgb(3, 77, 7);
+    z-index: 1;
   }
 }
-
 </style>

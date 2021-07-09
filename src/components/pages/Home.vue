@@ -23,12 +23,12 @@
 
 <script>
 import Slider from "../../services/Slider.vue";
-import Details from '../../services/Details.vue';
+ import Details from '../../services/Details.vue';
 export default {
   name: "app",
   components: {
     Slider,
-    Details,
+     Details,
   },
   data() {
     return {
@@ -84,6 +84,7 @@ export default {
   justify-content: center;
   margin: 10px;
   border-radius: 10%;
+  margin-top: 30px;
 }
 .col-md-3:hover {
   transform: translateY(-20px);

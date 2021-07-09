@@ -5,7 +5,7 @@ import Products from './components/pages/Products.vue';
 import Gallery from './components/pages/Gallery.vue';
 import Partners from './components/pages/Partners.vue';
 import Login from './components/pages/Login.vue';
-import Admin from './components/pages/Admin.vue';
+import Admin from './components/admin_panel/Admin.vue';
 
 
 const routes = [

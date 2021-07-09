@@ -22,22 +22,7 @@
           All right reserved in &copy; <span>Agrotech Global BD Nutrition</span>
         </p>
       </div>
-<div class="footer">
-  <div class="row">
-    <div class="col-md-3">
-      <h3>Agrotech-GlobalBD</h3>
-    </div>
-    <div class="col-md-6">
-      <address>House:66,&nbsp;Road:11,&nbsp;Bonosree,&nbsp;,Dhaka,&nbsp;,Bangladesh.</address>
-      <p>Email:gvetpharma.gmail.com &nbsp;Mobile:+8801674345763 &nbsp; Facebook:facebook</p>
-    </div>
-    <div class="col-md-3 name">
-      <p>Name of MD</p>
-    </div>
-    <div class="text">
-      <p>All right reserved in <span>Agrotech-GlobalBD</span></p>
-    </div>
-  </div>
+
 </template>
 
 <style scoped>

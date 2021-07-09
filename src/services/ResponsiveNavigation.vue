@@ -78,8 +78,15 @@ ul {
 figure {
   cursor: pointer;
   margin-left: 10px;
-  margin-right: 500px;
+  margin-right: 450px;
+  width: 100px;
+
 }
+/* figure p{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 50px;
+} */
 img {
   width: 40px;
   height: 40px;

@@ -1,46 +1,22 @@
 <template>
-<<<<<<< HEAD
-  <div class="footer">
-    <div class="row">
-      <div class="col-md-3">
-        <h3>Agrotech Global BD Nutrition</h3>
-      </div>
-      <div class="col-md-6">
-        <address>
-          Shamol Chya house , Road # 16, Holding number # 28,<br> 
-          Rupnagar, Mirpur, Dhaka 1216, Bangladesh.
-        </address>
-        <p>
-          Email:tapasp263@.gmail.com &nbsp;Mobile:+8801674345763 &nbsp;
-          Facebook:facebook
-        </p>
-      </div>
-      <div class="col-md-3 name">
-        <p>Name of MD</p>
-      </div>
-      <div class="text">
-        <p>
-          All right reserved in &copy; <span>Agrotech Global BD Nutrition</span>
-        </p>
-      </div>
-=======
+
 <div class="footer">
   <div class="row">
     <div class="col-md-3">
-      <h3>Agrotech-GlobalBD</h3>
+      <h3>Agrotech Global BD Nutrition</h3>
     </div>
     <div class="col-md-6">
-      <address>House:66,&nbsp;Road:11,&nbsp;Bonosree,&nbsp;,Dhaka,&nbsp;,Bangladesh.</address>
+      <address>Shamol Chya house , Road # 16, Holding number # 28,<br> Rupnagar, Mirpur Dhaka 1216, Bangladesh.</address>
       <p>Email:gvetpharma.gmail.com &nbsp;Mobile:+8801674345763 &nbsp; Facebook:facebook</p>
     </div>
     <div class="col-md-3 name">
       <p>Name of MD</p>
     </div>
     <div class="text">
-      <p>All right reserved in <span>Agrotech-GlobalBD</span></p>
->>>>>>> 544fd9e2f02a013e81f09adba7d33fca418f83b5
+      <p>All right reserved in <span>Agrotech Global BD Nutrition</span></p>
     </div>
   </div>
+</div>
 </template>
 
 <style scoped>

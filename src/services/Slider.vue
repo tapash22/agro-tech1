@@ -75,7 +75,7 @@ export default {
 
 img {
   height:400px;
-  width:1100px;
+  width:1080px;
 }
 
 .prev, .next {

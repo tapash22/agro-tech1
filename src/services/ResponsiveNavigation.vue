@@ -1,142 +1,263 @@
 <template>
-  <div class="container">
-    <nav class="fixed-top" :style="{ background: background || '#333' }">
-      <ul :style="{ background: background || '#333' }" ref="nav">
-        <figure class="image-logo" @click="toggleNav">
-          <img :src="imagePath" height="40px" width="40px" />
-        </figure>
-        <li
-          v-for="(link, index) in navLinks"
-          :key="index"
-          @mouseenter="
-            $event.currentTarget.style.background = hoverBackground || '#999'
-          "
-          @mouseleave="
-            $event.currentTarget.style.background = background || '#333'
-          "
-        >
-          <router-link :to="link.path" :style="{ color: linkColor || '#DDD' }">
-            {{ link.text }}
-            <i :class="link.icon" />
+  <div class="header">
+    <nav class="fixed-top" :class="{ change_color: scrollPosition > 15 }">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/agro.png" @click.prevent="onToggle" />
+      </a>
+      <ul class="navigation" v-if="mobile">
+        <li v-for="pgs in pages" :key="pgs.text">
+          <router-link class="link" :to="pgs.url">
+            {{ pgs.text }}
           </router-link>
+          <!-- <span v-if="pgs.child">
+            <ul>
+              <li v-for="i in pgs.child" :key="i.text">
+                <router-link :to="i.url">
+                  {{ i.text }}
+                </router-link>
+              </li>
+            </ul>
+          </span> -->
         </li>
       </ul>
     </nav>
-    <!-- <Details /> -->
   </div>
 </template>
-
 <script>
-// import Details from "./Details.vue";
 export default {
-  props: [
-    "navLinks",
-    "background",
-    "linkColor",
-    "hoverBackground",
-    "imagePath",
-  ],
   components: {
-    // Details,
   },
   data() {
     return {
       scrollPosition: null,
+      mobile: true,
+      child: true,
+      pages: [
+        {
+          url: "/home",
+          text: "Home",
+        },
+        {
+          url: "/about",
+          text: "About",
+        },
+        {
+          url: "/products",
+          text: "Products",
+          // child: [
+          //   {
+          //     url: "poultry",
+          //     text: "Poultry",
+          //   },
+          //   {
+          //     url: "ruminent",
+          //     text: "Ruminent",
+          //   },
+          //   {
+          //     url: "aqua",
+          //     text: "AQua",
+          //   },
+          //     {
+          //     url: "petanimal",
+          //     text: "Pet-Animal",
+          //   },
+          //   {
+          //     url: "vetClinic",
+          //     text: "Vet Clinic",
+          //   },
+          //    {
+          //     url: "others",
+          //     text: "Others",
+          //   },
+          // ],
+        },
+        {
+          url: "/gallery",
+          text: "Gallary",
+        },
+        {
+          url: "/partners",
+          text: "Partners",
+        },
+        {
+          url: "/login",
+          text: "Login",
+        },
+      ],
     };
   },
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
   methods: {
-    toggleNav() {
-      const nav = this.$refs.nav.classList;
-      nav.contains("active") ? nav.remove("active") : nav.add("active");
+    onToggle() {
+      this.mobile = !this.mobile;
+    },
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
     },
   },
 };
 </script>
 
 <style scoped>
-.container {
+.change_color {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #fff;
+}
+.header {
+  width: 100%;
+  padding: 0;
+}
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  box-shadow: 2px 2px 3px green;
+  margin: 0;
+  padding: 0;
+}
+.navbar-brand {
+  width: 300px;
+  height: 100px;
+}
+img {
   width: 100%;
   height: 100%;
-  background: rgb(238, 234, 234);
+  padding: 5px;
+ filter: saturate(100%);
 }
 
-.change_color {
-  background-color: red;
-}
-ul {
+nav > ul {
   display: flex;
-  height: 100%;
-  align-items: center;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-  box-shadow: 2px 2px 2px #ccc;
+  right: 0;
 }
-figure {
-  cursor: pointer;
-  margin-left: 10px;
-  margin-right: 450px;
-  width: 100px;
 
+nav > ul > li {
+  display: block;
+  list-style: none;
+  height: 100px;
+  padding-top: 30px;
 }
-/* figure p{
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-left: 50px;
-} */
-img {
-  width: 40px;
-  height: 40px;
-  margin-top: 10px;
-}
-a {
+
+nav > ul > li > a {
   text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  font-size: 1.2rem;
-  color: green;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+  margin: 15px;
 }
-i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+ul li a:hover{
+    color: green;
+    border-bottom: 2px solid yellow;
 }
-li {
-  list-style-type: none;
-  padding: 10px 20px;
+ul li:hover span{
+    display: block;
+}
+span{
+    width: 150px;
+    height: 240px;
+    position: absolute;
+    top: 100px;
+    display: none;
+    z-index: 1;
+    background: rgb(231, 231, 231);
+    
+}
+span ul{
+  padding:0;
+  margin: 0;
+}
+span li{
+    width: 150px;
+    height: 40px;
+    text-align: left;
+   background: rgb(231, 231, 231);
+    cursor: pointer;
+    padding: 5px;
+    list-style: none;
+}
+span li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+span li:hover{
+   border: 1px solid green;
+}
+@media screen and (max-width: 759px) {
+  nav {
+    margin-top: 100px;
+    background: #000;
+  }
+  .navbar-brand {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #2000;
+    margin-left: 10px;
+  }
+  nav > ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 40vh;
+    flex-direction: column;
+    transition: 300ms ease all;
+    top: 100px;
+    background: green;
+    transition: all 0.5s;
+  }
+
+  nav > ul > li {
+    text-align: center;
+    list-style: none;
+    width: 200px;
+    height: 40px;
+    margin-left: -30px;
+    padding: 5px;
+  }
+  ul li a:hover{
+    color: #fff;
+    border-bottom: 2px solid yellow;
+}
+  ul li:hover span{
+    display: block;
+    color: #000;
 }
 
-@media screen and (max-width: 759px) {
-  ul {
-    position: absolute;
-    width: 300px;
-    flex-direction: column;
-    left: -300px;
-    transition: 300ms ease all;
-    top: 60px;
-  }
-  ul.active {
-    left: 0px;
-  }
-  figure {
-    position: fixed;
-    z-index: 1;
-    top: 10px;
-    left: 2px;
-  }
-  li {
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  a {
-    flex-direction: row;
-    margin-left: 20px;
-    justify-content: space-between;
-    margin-right: 13px;
-  }
+  span{
+    width: 200px;
+    height: 240px;
+    position: relative;
+    display: none;
+    margin-left:-40px;
+    margin-top: -100px;
+     left: 200px;
+}
+span li{
+    width: 150px;
+    height: 40px;
+    text-align: left;
+    background: #fff;
+    cursor: pointer;
+    padding: 5px;
+    list-style: none;
+}
+span li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+span li:hover{
+   border: 1px solid green;
+}
+  span li a:hover{
+    color: #000;
+    border-bottom: 2px solid yellow;
+}
 }
 </style>

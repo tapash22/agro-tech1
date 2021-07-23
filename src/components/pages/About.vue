@@ -146,8 +146,8 @@ export default {
 .container {
   width: 100%;
   height: 100%;
-  background: rgb(238, 234, 234);
-  padding-top: 80px;
+  background: rgb(236, 233, 233);
+  margin-top: 100px;
 }
 .row {
   position: relative;

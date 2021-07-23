@@ -35,12 +35,12 @@ export default {
 </script>
 <style scoped>
 .gallery {
-  padding-top: 50px;
+  padding-top: 10px;
   padding-bottom: 50px;
 }
 
 h2 {
-  margin-top: 20px;
+  margin-top: 110px;
   margin-bottom: 20px;
   background: -webkit-linear-gradient(#fff, lighten(#5c4084, 20%));
   /* -webkit-text-fill-color: transparent;

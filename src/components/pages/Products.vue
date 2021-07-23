@@ -101,7 +101,7 @@ export default {
   width: 100%;
   height: 100%;
   background: rgb(238, 234, 234);
-  padding-top: 80px;
+  margin-top: 100px;
 }
 h2 {
   margin-top: 60px;

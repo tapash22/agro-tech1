@@ -23,6 +23,7 @@
   background: #fff;
   text-align: center;
   justify-content: center;
+  box-shadow: 2px 2px 3px black;
 }
 .row {
   justify-content: center;

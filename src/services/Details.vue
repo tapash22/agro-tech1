@@ -9,14 +9,14 @@
   position: fixed;
   right: 0;
   width: 50%;
-  margin-top: -15px;
+  top:67px;
   height: 35px;
   margin-left: 2px;
   z-index: 1;
    background: linear-gradient(
     to right,
-    #fff 0%,
-    #fff 50%,
+    rgb(18, 13, 85) 0%,
+    rgb(49, 27, 99) 50%,
     #08ce33 50%,
     #1eda0d 100%
   );
@@ -24,7 +24,7 @@
 .text p {
   font-size: 1.2em;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   position: absolute;
   width: 50%;
   height: 100%;

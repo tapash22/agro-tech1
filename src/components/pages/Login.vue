@@ -4,21 +4,23 @@
       <div class="col-md-6">
         <h2>Login Form</h2>
         <hr />
-        <form @submit.prevent="seneMessage" class="msg">
+        <form class="msg">
           <div class="form-group">
             <label>Email</label>
-            <input type="text" class="form-control" v-model="user_email" />
+            <input type="text" class="form-control" v-model="email" />
+            <!-- <div class="error" v-if="errors.email">{{ errors.email }}</div> -->
           </div>
           <div class="form-group">
             <label>Password</label>
-            <input
-              type="password"
-              class="form-control"
-              v-model="user_password"
-            />
+            <input type="password" class="form-control" v-model="password" />
+            <!-- <div class="error" v-if="errors.password">
+              {{ errors.password }}
+            </div> -->
           </div>
           <div class="mt-3">
-            <button type="submit" class="btn btn-lg btn-primary" @click.prevent="onClick">Login</button>
+            <button class="btn btn-lg btn-primary" @click.prevent="onLogin">
+              Login
+            </button>
           </div>
         </form>
       </div>
@@ -27,26 +29,43 @@
 </template>
 
 <script>
+// import SignupValidation from '../../validation/SignupValidation';
+import { fb } from "../../firebase";
 export default {
-    mounted() {
+  data() {
+    return {
+      email: "",
+      password: "",
+      errors: [],
+    };
+  },
+  mounted() {
     window.scrollTo(0, 0);
   },
-  methods:{
-    onClick(){
-      this.$router.push('/admin');
-    }
-  }
-}
+  methods: {
+    onLogin() {
+      fb.auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(()=>{
+          this.$router.replace('/admin/dashboard');
+        })
+        .catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          if (errorCode === "auth/wrong-password") {
+            alert("Wrong password.");
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+        });
+    },
+  },
+};
 </script>
 
 <style scoped>
-.login{
-    background-image: url('../../assets/login.jpg');
-  background-position: center;
-  background-size: cover;
-
-}
-
 .row {
   height: 450px;
   justify-content: center;
@@ -54,11 +73,14 @@ export default {
 }
 .col-md-6 {
   width: 600px;
-  height: 350px;
-  margin-top: 60px;
+  height: 400px;
+  margin-top: 70px;
   box-shadow: 5px 5px 5px rgb(62, 62, 141);
   z-index: 1;
   background: #fff;
+  background-image: url("../../assets/login.jpg");
+  background-position: center;
+  background-size: cover;
 }
 h2 {
   padding-top: 40px;
@@ -75,6 +97,9 @@ h2 {
 label {
   font-size: 1.2rem;
   font-weight: 500;
+}
+.error {
+  color: red;
 }
 
 @media only screen and (max-width: 767px) {

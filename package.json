@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "apexcharts": "^3.27.2",
     "core-js": "^3.6.5",
+    "firebase": "^8.7.1",
     "vue": "^3.0.0",
+    "vue-apexcharts": "^1.6.1",
+    "vue-firestore": "^0.3.30",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {

@@ -29,7 +29,7 @@
             </div>
           </div>
           <!-- sidebar-menu  -->
-          <div class="sidebar-item sidebar-menu">
+          <div class="sidebar-item sidebar-menu ">
             <h3>Menu</h3>
             <hr>
             <ul>

@@ -5,7 +5,7 @@
         <img :src="currentImg" />
       </div>
     </transition-group>
-    <a class="prev" @click="prev" href="#">&#10094; </a>
+    <a class="prev" @click="prev " href="#">&#10094; </a>
     <a class="next" @click="next" href="#">&#10095; </a>
   </div>
 </template>

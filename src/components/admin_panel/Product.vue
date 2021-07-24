@@ -55,7 +55,7 @@
           <thead>
             <tr>
               <th>Product name</th>
-              <th>Company name</th>
+              <th>Company  name</th>
               <th>Pet Name</th>
               <th>Description</th>
               <th>Image</th>

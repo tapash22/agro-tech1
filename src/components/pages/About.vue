@@ -55,7 +55,7 @@
             <h5>Product/Services:</h5>
             <ul>
               <ol type="1">
-                <span> Veterinary Supplies:&nbsp;</span
+                <span> Veterinary Supplies :&nbsp;</span
                 >Veterinary vaccines
               </ol>
             </ul>

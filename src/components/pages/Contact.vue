@@ -5,7 +5,7 @@
             <form @submit.prevent="seneMessage" class="msg">
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" v-model="user_email"/>
+                    <input type="text" class="form-control " v-model="user_email"/>
                 </div>
                 <div class="form-group">
                     <label>Massage</label>

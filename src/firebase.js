@@ -2,7 +2,7 @@ import firebase from 'firebase';
 require("firebase/firestore");
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBvpsgbG73DXCBaGFhCxw4lHXlpqzej92w",
+    apiKey: "AIzaSyBvpsgbG73DXCBaGFhCxw4lHXlpqzej92w" ,
     authDomain: "agro-tech-2885e.firebaseapp.com",
     projectId: "agro-tech-2885e",
     storageBucket: "agro-tech-2885e.appspot.com",

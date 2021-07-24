@@ -5,7 +5,7 @@
                 <h3>Add image for slide</h3>
                 <form>
                     <div class="form-group">
-                        <label>Event Name</label>
+                        <label>Event Name </label>
                         <input class="form-control" type="text" placeholder="Event Name .."/>
                     </div>
                     <div class="form-group my-2 upload">

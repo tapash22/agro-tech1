@@ -81,7 +81,7 @@
                 <div class="card">
                   <h5>Teamwork</h5>
                   <p class="wrap">
-                    We move together to make our organization great/grand.
+                    We move together to make our organization great/grand. 
                   </p>
                 </div>
               </div>

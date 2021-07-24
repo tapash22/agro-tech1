@@ -7,7 +7,7 @@
           <Slider />
         </div>
       </div>
-      <div class="items">
+      <div class="items ">
         <div
           class="col-md-3"
           v-for="(img, index) in images"

@@ -14,7 +14,7 @@
       </button>
       <button
         type="button"
-        aria-label="Next Photo"
+        aria-label="Next Photo "
         class="next"
         @click="nextPhoto()"
       >

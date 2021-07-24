@@ -7,7 +7,7 @@ import 'animate.css';
 const app = createApp(App);
 app.use(router);
 //  app.use(VueFirestore);
-app.mount('#app');
+app.mount('#app'); 
 
 
 

@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <h3>Add User</h3>
         <form>
-          <div class="form-group">
+          <div class="form-group ">
             <label>Email</label>
             <input
               class="form-control"

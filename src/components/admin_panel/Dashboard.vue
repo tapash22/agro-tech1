@@ -4,7 +4,7 @@
       <div class="col-md-3">
         <div class="card">
           <h3>10</h3>
-          <h1>Employe</h1>
+          <h1>Employe </h1>
         </div>
       </div>
       <div class="col-md-3">

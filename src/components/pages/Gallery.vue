@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import vueGallery from "../../services/vueGallery.vue";
+import vueGallery from "../../services/vueGallery.vue ";
 export default {
   components: {
     vueGallery,

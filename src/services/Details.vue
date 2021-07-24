@@ -10,6 +10,7 @@
   right: 0;
   width: 50%;
   top:67px;
+  margin-top: -15px;
   height: 35px;
   margin-left: 2px;
   z-index: 1;
@@ -17,6 +18,8 @@
     to right,
     rgb(18, 13, 85) 0%,
     rgb(49, 27, 99) 50%,
+    #fff 0%,
+    #fff 50%,
     #08ce33 50%,
     #1eda0d 100%
   );
@@ -24,7 +27,7 @@
 .text p {
   font-size: 1.2em;
   font-weight: 500;
-  color: #fff;
+  color: #000;
   position: absolute;
   width: 50%;
   height: 100%;
@@ -44,4 +47,6 @@
   }
 }
 
+
 </style>
+

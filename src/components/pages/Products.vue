@@ -5,7 +5,7 @@
         <div class="col-md-8">
           <div class="pdt">
             <div class="row">
-              <div class="col-md-6" v-for="pds in products" :key="pds.id">
+              <div class="col-md-6" v-for="pds in products" :key="pds.id ">
                 <div class="card">
                   <img :src="pds.img"/>
                 </div>

@@ -6,7 +6,7 @@
       </a>
       <ul class="navigation" v-if="mobile">
         <li v-for="pgs in pages" :key="pgs.text">
-          <router-link class="link" :to="pgs.url">
+          <router-link class="link " :to="pgs.url">
             {{ pgs.text }}
           </router-link>
           <!-- <span v-if="pgs.child">

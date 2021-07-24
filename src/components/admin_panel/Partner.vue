@@ -5,7 +5,7 @@
         <h3>Add Partner</h3>
         <form>
           <div class="form-group">
-            <label>Company Name</label>
+            <label>Company  Name</label>
             <input class="form-control" type="text" />
           </div>
            <div class="form-group">

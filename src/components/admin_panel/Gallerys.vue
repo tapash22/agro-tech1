@@ -2,7 +2,7 @@
     <div class="gallery">
         <div class="row">
             <div class="col-md-6">
-                  <h3>Gallery</h3>
+                  <h3>Gallery </h3>
                 <form>
                     <div class="form-group">
                         <label>Event Name</label>

@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       images: [
-        "https://i.postimg.cc/L64F1bQj/partner1.jpg",
+        "https://i.postimg.cc/L64F1bQj/partner1.jpg ",
         "https://i.postimg.cc/25ZsYR3N/partner2.jpg",
         "https://i.postimg.cc/kGnzW2s7/partner3.jpg",
         "https://i.postimg.cc/MHCTqXd9/flow-min-3.jpg",

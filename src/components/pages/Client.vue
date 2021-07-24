@@ -2,7 +2,7 @@
   <div class="home">
     <ResponsiveNavigation/>
     <div class="row">
-      <div class="container">
+      <div class="container ">
       <router-view></router-view>
       </div>
     </div>

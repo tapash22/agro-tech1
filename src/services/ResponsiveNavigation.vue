@@ -2,14 +2,14 @@
   <div class="header">
     <nav class="fixed-top" :class="{ change_color: scrollPosition > 15 }">
       <a class="navbar-brand" href="#">
-        <img src="../assets/agro.png" @click.prevent="onToggle" />
+        <img src="../assets/logo.png" @click.prevent="onToggle" />
       </a>
       <ul class="navigation" v-if="mobile">
         <li v-for="pgs in pages" :key="pgs.text">
-          <router-link class="link " :to="pgs.url">
+          <router-link class="link" :to="pgs.url">
             {{ pgs.text }}
           </router-link>
-          <!-- <span v-if="pgs.child">
+          <span v-if="pgs.child">
             <ul>
               <li v-for="i in pgs.child" :key="i.text">
                 <router-link :to="i.url">
@@ -17,7 +17,7 @@
                 </router-link>
               </li>
             </ul>
-          </span> -->
+          </span>
         </li>
       </ul>
     </nav>
@@ -25,8 +25,7 @@
 </template>
 <script>
 export default {
-  components: {
-  },
+  components: {},
   data() {
     return {
       scrollPosition: null,
@@ -44,32 +43,38 @@ export default {
         {
           url: "/products",
           text: "Products",
-          // child: [
-          //   {
-          //     url: "poultry",
-          //     text: "Poultry",
-          //   },
-          //   {
-          //     url: "ruminent",
-          //     text: "Ruminent",
-          //   },
-          //   {
-          //     url: "aqua",
-          //     text: "AQua",
-          //   },
-          //     {
-          //     url: "petanimal",
-          //     text: "Pet-Animal",
-          //   },
-          //   {
-          //     url: "vetClinic",
-          //     text: "Vet Clinic",
-          //   },
-          //    {
-          //     url: "others",
-          //     text: "Others",
-          //   },
-          // ],
+          child: [
+            {
+              url: "poultry",
+              text: "Poultry",
+              child: [
+                { url: "/", text: "Livertonic" },
+                { url: "/", text: "Minerals" },
+                { url: "/", text: "Aminoacid" },
+                { url: "/", text: "Enzyme" },
+              ],
+            },
+            {
+              url: "ruminent",
+              text: "Ruminent",
+              child: [
+                { url: "/", text: "Livertonic" },
+                { url: "/", text: "Minerals" },
+                { url: "/", text: "Aminoacid" },
+                { url: "/", text: "Enzyme" },
+              ],
+            },
+            {
+              url: "aqua",
+              text: "AQua",
+              child: [
+                { url: "/", text: "Livertonic" },
+                { url: "/", text: "Minerals" },
+                { url: "/", text: "Aminoacid" },
+                { url: "/", text: "Enzyme" },
+              ],
+            },
+          ],
         },
         {
           url: "/gallery",
@@ -113,20 +118,22 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 120px;
   box-shadow: 2px 2px 3px green;
   margin: 0;
   padding: 0;
+  background: #fff;
 }
 .navbar-brand {
-  width: 300px;
-  height: 100px;
+  width: 400px;
+  height: 120px;
+  padding: 0;
+  margin: 0;
 }
 img {
   width: 100%;
   height: 100%;
-  padding: 5px;
- filter: saturate(100%);
+  margin-left: 50px;
 }
 
 nav > ul {
@@ -138,58 +145,56 @@ nav > ul > li {
   display: block;
   list-style: none;
   height: 100px;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 nav > ul > li > a {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 500;
+  color: green;
+  padding: 20px;
+}
+ul li a:hover,
+a.router-link-exact-active {
   color: #000;
-  margin: 15px;
 }
-ul li a:hover{
-    color: green;
-    border-bottom: 2px solid yellow;
+ul li:hover span {
+  display: block;
 }
-ul li:hover span{
-    display: block;
+span {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 100px;
+  display: none;
+  z-index: 1;
+  background: #fff;
 }
-span{
-    width: 150px;
-    height: 240px;
-    position: absolute;
-    top: 100px;
-    display: none;
-    z-index: 1;
-    background: rgb(231, 231, 231);
-    
-}
-span ul{
-  padding:0;
+span ul {
+  padding: 0;
   margin: 0;
 }
-span li{
-    width: 150px;
-    height: 40px;
-    text-align: left;
-   background: rgb(231, 231, 231);
-    cursor: pointer;
-    padding: 5px;
-    list-style: none;
+span li {
+  width: 150px;
+  height: 50px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
 }
-span li a{
+span li a {
   text-decoration: none;
   color: #000;
   font-size: 1.3rem;
   font-weight: 500;
 }
-span li:hover{
-   border: 1px solid green;
+span li:hover {
+  background: rgba(0, 0, 0, 0.226);
 }
 @media screen and (max-width: 759px) {
   nav {
-    margin-top: 100px;
     background: #000;
   }
   .navbar-brand {
@@ -219,25 +224,25 @@ span li:hover{
     margin-left: -30px;
     padding: 5px;
   }
-  ul li a:hover{
+  ul li a:hover {
     color: #fff;
     border-bottom: 2px solid yellow;
-}
-  ul li:hover span{
+  }
+  ul li:hover span {
     display: block;
     color: #000;
-}
+  }
 
-  span{
+  span {
     width: 200px;
     height: 240px;
     position: relative;
     display: none;
-    margin-left:-40px;
+    margin-left: -40px;
     margin-top: -100px;
-     left: 200px;
-}
-span li{
+    left: 200px;
+  }
+  span li {
     width: 150px;
     height: 40px;
     text-align: left;
@@ -245,19 +250,19 @@ span li{
     cursor: pointer;
     padding: 5px;
     list-style: none;
-}
-span li a{
-  text-decoration: none;
-  color: #000;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-span li:hover{
-   border: 1px solid green;
-}
-  span li a:hover{
+  }
+  span li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  span li:hover {
+    border: 1px solid green;
+  }
+  span li a:hover {
     color: #000;
     border-bottom: 2px solid yellow;
-}
+  }
 }
 </style>

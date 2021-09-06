@@ -1,5 +1,7 @@
-import firebase from 'firebase';
-require("firebase/firestore");
+import firebase from 'firebase/app';
+import "firebase/firestore";
+import "firebase/firebase-auth";
+import "firebase/storage";
 
 var firebaseConfig = {
     apiKey: "AIzaSyBvpsgbG73DXCBaGFhCxw4lHXlpqzej92w" ,
@@ -10,6 +12,7 @@ var firebaseConfig = {
     appId: "1:166476037107:web:5a0187cb68e2e0ee30b086",
     measurementId: "G-ELSTMDLYCY"
   };
+
   // Initialize Firebase
   const fb = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();

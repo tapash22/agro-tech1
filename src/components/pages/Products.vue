@@ -5,9 +5,10 @@
         <div class="col-md-8">
           <div class="pdt">
             <div class="row">
-              <div class="col-md-6" v-for="pds in products" :key="pds.id ">
+              <div class="col-md-6" v-for="product in products" :key="product.id">
                 <div class="card">
-                  <img :src="pds.img"/>
+                  <img :src="product.data().image" />
+                  <p>{{ product.data().product_name }}</p>
                 </div>
               </div>
             </div>
@@ -22,76 +23,38 @@
 </template>
 
 <script>
+import { db } from "../../firebase";
 export default {
   data() {
     return {
-      products: [
-        {
-          id: 1,
-          img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
-          price: "1000",
-        },
-        {
-          id: 2,
-          img: "https://i.postimg.cc/BvZr8MKF/b.jpg",
-          price: "1000",
-        },
-        {
-          id: 3,
-          img: "https://i.postimg.cc/JhyQdXwg/c.jpg",
-          price: "1000",
-        },
-        {
-          id: 4,
-          img: "https://i.postimg.cc/8cbdrBWF/d.jpg",
-          price: "1000",
-        },
-        {
-          id: 5,
-          img: "https://i.postimg.cc/pX2JM4bK/e.jpg",
-          price: "1000",
-        },
-        {
-          id: 6,
-          img: "https://i.postimg.cc/NjF85X0M/f.jpg",
-          price: "1000",
-        },
-        {
-          id: 7,
-          img: "https://i.postimg.cc/RF5wsbL6/g.jpg",
-          price: "1000",
-        },
-        {
-          id: 8,
-          img: "https://i.postimg.cc/QNqcmm9C/h.jpg",
-          price: "1000",
-        },
-        {
-          id: 9,
-          img: "https://i.postimg.cc/xTTM4mMR/i.jpg",
-          price: "1000",
-        },
-        {
-          id: 10,
-          img: "https://i.postimg.cc/BbhL0hHC/k.jpg",
-          price: "1000",
-        },
-        {
-          id: 11,
-          img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
-          price: "1000",
-        },
-        {
-          id: 12,
-          img: "https://i.postimg.cc/3ryHCSbC/a.jpg",
-          price: "1000",
-        },
-      ],
+      products: [],
+       product: {
+        product_name: "",
+        company_name: "",
+        pet_name: "",
+        description: "",
+        image:"",
+      },
     };
   },
+    created() {
+          db.collection("products")
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            this.products.push(doc);
+          });
+        });
+    },
+
   mounted() {
     window.scrollTo(0, 0);
   },
+  // firestore() {
+  //   return {
+  //     products: db.collection("products"),
+  //   };
+  // },
 };
 </script>
 <style scoped>
@@ -100,7 +63,7 @@ export default {
 .container {
   width: 100%;
   height: 100%;
-  background: rgb(238, 234, 234);
+  background: #fff;
   margin-top: 100px;
 }
 h2 {
@@ -118,33 +81,31 @@ h2 {
   justify-content: space-around;
   width: 100%;
   height: 100%;
- 
 }
 .col-md-8 {
   width: 60%;
   background: #fff;
   margin-bottom: 20px;
 }
-.pdt .row{
+.pdt .row {
   width: 100%;
-  position:inherit;
+  position: inherit;
   justify-content: space-around;
 }
-.pdt .row .col-md-6{
+.pdt .row .col-md-6 {
   width: 40%;
   height: 200px;
   padding: 10px;
   margin: 5px;
- 
 }
-.pdt .row .col-md-6 img{
+.pdt .row .col-md-6 img {
   width: 100%;
   height: 100%;
   transform: scale(1);
   transition: 0.8s ease;
   cursor: pointer;
 }
-.pdt .row .col-md-6 img:hover{
+.pdt .row .col-md-6 img:hover {
   transform: scale(1.1);
 }
 
@@ -153,7 +114,7 @@ h2 {
   background: #fff;
   margin-bottom: 20px;
 }
-.col-md-4 p{
+.col-md-4 p {
   font-size: 1.5rem;
   font-weight: 500;
   padding: 5px;

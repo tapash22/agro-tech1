@@ -1,11 +1,10 @@
 <template>
   <div class="sld">
-    <transition-group name="fade" tag="div">
-      <div class="sd" v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
-      </div>
-    </transition-group>
-    <a class="prev" @click="prev " href="#">&#10094; </a>
+    <div class="sd" v-for="i in [currentIndex]" :key="i">
+      <img :src="currentImg" />
+    </div>
+
+    <a class="prev" @click="prev" href="#">&#10094; </a>
     <a class="next" @click="next" href="#">&#10095; </a>
   </div>
 </template>
@@ -15,45 +14,85 @@ export default {
   data() {
     return {
       images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
+        "https://i.postimg.cc/sXwpMmD2/1.jpg",
+        "https://i.postimg.cc/MKh1fvx1/3.jpg",
+        "https://i.postimg.cc/L5JZnMby/2.jpg",
+        "https://i.postimg.cc/RVnHm4fh/4.jpg",
+        "https://i.postimg.cc/8zmB8TQW/5.jpg",
       ],
       timer: null,
-      currentIndex: 0
+      currentIndex: 0,
     };
   },
 
-  mounted: function() {
+  mounted() {
     this.startSlide();
   },
 
   methods: {
-    startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
+    startSlide() {
+      this.timer = setInterval(this.next, 3000);
     },
 
-    next: function() {
+    next() {
       this.currentIndex += 1;
     },
-    prev: function() {
+    prev() {
       this.currentIndex -= 1;
-    }
+    },
   },
 
   computed: {
-    currentImg: function() {
+    currentImg() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.sld{
+.sld {
+    width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.sd {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+}
+img {
+  height: 500px;
+  width: 100%;
+  opacity: 1;
+  filter: brightness(90%);
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  color: green;
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 500;
+  transition: 0.7s ease;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev {
+  left: 20px;
 }
 
 .fade-enter-active,
@@ -62,42 +101,55 @@ export default {
   overflow: hidden;
   visibility: visible;
   position: absolute;
-  width:100%;
+  width: 100%;
   opacity: 1;
 }
 
 .fade-enter,
 .fade-leave-to {
   visibility: hidden;
-  width:100%;
+  width: 100%;
   opacity: 0;
 }
-
-img {
-  height:400px;
-  width:1080px;
+@media screen and (max-width: 759px) {
+  .sld {
+  width: 100%;
+  height: 100%;
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  color: white;
-  font-weight: bold;
-  font-size: 2.5rem;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
+.sd {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
+  img {
+    height: 300px;
+    width: 100%;
+    opacity: 1;
+    filter: brightness(90%);
+  }
 
-.next {
-  right: 10px;
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    color: green;
+    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 0.7s ease;
+    border-radius: 0 4px 4px 0;
+    text-decoration: none;
+    user-select: none;
+  }
+  .next {
+    right: 10px;
+  }
+  .prev {
+    left: 10px;
+  }
 }
-
-.prev {
-  left: 10px;
-}
-
 </style>

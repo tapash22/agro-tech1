@@ -15,12 +15,14 @@ import Product from './components/admin_panel/Product.vue';
 import Slider from './components/admin_panel/Slider.vue';
 import User from './components/admin_panel/User.vue';
 import { fb } from './firebase';
+import todo from './components/pages/todo.vue';
 
 
 const routes = [
     {
         path: '/',
         component: Client,
+        redirect:'home',
         children: [
             { path: 'home', component: Home },
             { path: 'about', component: About },
@@ -28,6 +30,7 @@ const routes = [
             { path: 'gallery', component: Gallery },
             { path: 'partners', component: Partners },
             { path: 'login', component: Login },
+            { path: 'todo', component: todo },
         ]
     },
 

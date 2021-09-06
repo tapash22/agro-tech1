@@ -8,14 +8,10 @@
           <div class="form-group">
             <label>Email</label>
             <input type="text" class="form-control" v-model="email" />
-            <!-- <div class="error" v-if="errors.email">{{ errors.email }}</div> -->
           </div>
           <div class="form-group">
             <label>Password</label>
             <input type="password" class="form-control" v-model="password" />
-            <!-- <div class="error" v-if="errors.password">
-              {{ errors.password }}
-            </div> -->
           </div>
           <div class="mt-3">
             <button class="btn btn-lg btn-primary" @click.prevent="onLogin">
@@ -29,7 +25,6 @@
 </template>
 
 <script>
-// import SignupValidation from '../../validation/SignupValidation';
 import { fb } from "../../firebase";
 export default {
   data() {
@@ -39,9 +34,11 @@ export default {
       errors: [],
     };
   },
+  
   mounted() {
     window.scrollTo(0, 0);
   },
+
   methods: {
     onLogin() {
       fb.auth()
@@ -74,7 +71,7 @@ export default {
 .col-md-6 {
   width: 600px;
   height: 400px;
-  margin-top: 70px;
+  margin-top: 100px;
   box-shadow: 5px 5px 5px rgb(62, 62, 141);
   z-index: 1;
   background: #fff;
@@ -104,12 +101,13 @@ label {
 
 @media only screen and (max-width: 767px) {
   .row {
-    background: rgb(5, 5, 78);
+    background: #fff;
+    height: 350px;
   }
   .col-md-6 {
     width: 300px;
     height: 300px;
-    margin-top: 50px;
+    margin-top: 130px;
   }
   h2 {
     padding: 20px;

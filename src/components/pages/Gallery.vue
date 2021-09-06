@@ -1,7 +1,6 @@
 <template>
   <div class="gallery">
     <h2>hall of agrotech</h2>
-
     <div class="container">
       <vue-gallery :photos="photos"></vue-gallery>
     </div>
@@ -9,13 +8,14 @@
 </template>
 
 <script>
-import vueGallery from "../../services/vueGallery.vue ";
+// import { db } from '../../firebase';
+import vueGallery from "../../services/vueGallery.vue";
 export default {
   components: {
     vueGallery,
   },
   data() {
-    return {
+    return { 
       photos: [
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-01-min.jpg",
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-02-min.jpg",
@@ -25,9 +25,21 @@ export default {
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-06-min.jpg",
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-07-min.jpg",
         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-08-min.jpg",
+         "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-06-min.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-07-min.jpg",
+        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/lordea-home-08-min.jpg",
       ],
     };
   },
+  // created() {
+  //     db.collection("partners")
+  //       .get()
+  //       .then((querySnapshot) => {
+  //         querySnapshot.forEach((doc) => {
+  //           this.partners.push(doc);
+  //         });
+  //       });
+  //   },
   mounted () {
   window.scrollTo(0, 0);
 },
@@ -40,7 +52,7 @@ export default {
 }
 
 h2 {
-  margin-top: 110px;
+  margin-top: 130px;
   margin-bottom: 20px;
   background: -webkit-linear-gradient(#fff, lighten(#5c4084, 20%));
   /* -webkit-text-fill-color: transparent;

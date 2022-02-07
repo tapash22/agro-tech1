@@ -84,8 +84,8 @@
             <div class="row">
               <div class="col-md-8">
                 <h6>Export</h6>
-                <div class="img" style="width: 200px; height: 200px">
-                  <img src="../../assets/about.jpg" />
+                <div class="image">
+                  <img src="../../assets/map.jpg" />
                 </div>
               </div>
               <div class="col-md-2">
@@ -118,7 +118,7 @@
                 </ul>
               </div>
               <div class="col-md-4">
-                <h6>Turnover</h6>
+                <h6>Turn Over</h6>
                 <ul>
                   <li>No</li>
                   <li>0</li>
@@ -270,7 +270,7 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gideon+Roman&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Merienda:wght@700&family=Montserrat&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;500&family=Romanesco&family=Ubuntu:wght@700&family=Vollkorn:wght@500&display=swap');
 
 .container {
   width: 100%;
@@ -281,7 +281,7 @@ export default {
 .row {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
 }
@@ -290,88 +290,142 @@ export default {
   background: #fff;
   margin-bottom: 20px;
 }
-h4 {
+.col-md-4{
+    width: 40%;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.col-md-8 h4, .col-md-4 h4 {
   padding-top: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Luxurious Roman', cursive;
   text-align: left;
-  color: rgb(45, 206, 131);
+  color: #000;
   text-transform: uppercase;
 }
-hr {
-  width: 55%;
-  height: 3px;
-  background: rgb(16, 2, 78);
+ .col-md-8 hr, .col-md-4 hr {
+  width: 80%;
+  height: 4px;
+  background: green;
   border-radius: 30%;
 }
 .col-md-8 .promo {
   width: 100%;
 }
-.promo .wrap {
-  text-align: unset;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 300;
-
+.col-md-8 .promo .wrap {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
+  text-align: justify;
   color: #000;
 }
-.col-md-4 {
-  width: 40%;
-  height: 100vh;
-  background: #fff;
-  margin-bottom: 50px;
-}
-.policy,
-.services {
+.col-md-4 .details{
   width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.col-md-4 .details ul{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: 20px;
+  display: block;
+}
+.details ul li{
+  padding: 5px;
+  margin: 0;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.details ul li span{
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
+}
+.col-md-8 .policy,
+.col-md-8 .services {
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
+}
+.policy h5, .services h5{
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
+  padding: 5px;
+  margin: 0;
 }
 .policy ul,
 .services ul {
   display: flex;
 }
 .policy ul li {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   margin: 10px;
   list-style: none;
   text-align: left;
 }
 
 .services ul ol {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   margin: 10px;
 }
 .services ul ol span {
   font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
 }
 
-.export .row {
+.col-md-8 .export .row {
   position: relative;
   display: flex;
   justify-content: space-around;
 }
 .export .row .col-md-8 {
   width: 60%;
-  height: 300px;
+  height: 350px;
   padding: 5px;
+  margin: 0;
   background: #fff;
   justify-content: left;
 }
 .export .row .col-md-8 h6 {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   color: black;
   text-align: left;
   padding-left: 20px;
 }
-.export .row .col-md-8 img {
+.export .row .col-md-8 .image{
   width: 380px;
   height: 300px;
+  padding: 5px;
+  margin: 0;
+}
+.export .row .col-md-8 .image img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 .export .row .col-md-2 {
   width: 20%;
   justify-content: center;
+}
+.export .row .col-md-2 h6{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Luxurious Roman', cursive;
 }
 .export .row .col-md-2 ul {
   display: block;
@@ -379,6 +433,9 @@ hr {
 }
 .export .row .col-md-2 ul li {
   list-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
 }
 .groth .row {
   position: relative;
@@ -393,6 +450,10 @@ hr {
   justify-content: center;
 }
 .groth .row .col-md-4 h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Luxurious Roman', cursive;
   text-align: center;
 }
 .groth .row .col-md-4 ul {
@@ -401,6 +462,9 @@ hr {
 }
 .groth .row .col-md-4 ul li {
   list-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   text-align: center;
 }
 .row .col-md-4 .details {
@@ -415,18 +479,20 @@ hr {
 .row .col-md-4 .details ul li {
   height: 50px;
   list-style: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   display: flex;
   text-align: left;
 }
 .row .col-md-4 .details ul li span {
   width: 180px;
   height: 40px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   text-align: left;
 }
 
@@ -436,6 +502,9 @@ hr {
   justify-content: space-around;
   width: 100%;
   height: 200px;
+  box-shadow: 0 0 10px blue;
+  padding: 5px;
+  margin: 5px;
 }
 .partners .col-md-3 {
   width: 40%;
@@ -460,13 +529,20 @@ hr {
   background: #fff;
   margin-bottom: 20px;
 }
-h4 {
+.partners .col-md-9 h4 {
   padding-top: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: 'Luxurious Roman', cursive;
+  font-weight: 700;
   text-align: left;
-  color: rgb(45, 206, 131);
+  color: #000;
   text-transform: uppercase;
+}
+.partners .col-md-9 p{
+    font-size: 1rem;
+  font-family: 'Luxurious Roman', cursive;
+  font-weight: 600;
+  text-align: justify;
 }
 /* first row end */
 .row2 {
@@ -481,9 +557,10 @@ h4 {
 .row2 h4 {
   padding-top: 30px;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
   text-align: left;
-  color: rgb(45, 206, 131);
+  color: #fff;
   text-transform: uppercase;
   margin: 5px;
 }
@@ -523,19 +600,22 @@ h4 {
 .box .col-md-4 .card {
   width: 300px;
   height: 200px;
-  padding: 20px;
+  padding: 10px;
+  box-shadow: 0 0 15px blue;
 }
 .box .col-md-4 .card h5 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+  font-family: 'Luxurious Roman', cursive;
   padding: 5px;
 }
 .box .col-md-4 .card p {
   padding: 5px;
   text-align: center;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
 }
 .row3 {
   width: 100%;
@@ -546,70 +626,4 @@ h4 {
   margin-left: -10px;
 }
 
-@media screen and (max-width: 759px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    background: rgb(236, 233, 233);
-    margin-top: 100px;
-  }
-  .row {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  .col-md-8 {
-    width: 100%;
-    background: #fff;
-    margin-bottom: 20px;
-    justify-content: center;
-  }
-  .col-md-4 {
-    width: 100%;
-    background: #fff;
-    justify-content: center;
-  }
-  h4 {
-    padding-top: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: left;
-    color: rgb(45, 206, 131);
-    text-transform: uppercase;
-  }
-  .export .row {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-  }
-  .export .row .col-md-8 {
-    width: 60%;
-    height: 350px;
-    padding: 5px;
-    background: #fff;
-  }
-  .export .row .col-md-8 h6 {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: black;
-    text-align: left;
-    padding-left: 20px;
-  }
-  .export .row .col-md-8 img {
-    width: 100%;
-    height: 300px;
-  }
-  .export .row .col-md-2 {
-    width: 20%;
-    justify-content: center;
-  }
-  .export .row .col-md-2 ul {
-    display: block;
-    justify-content: center;
-  }
-  .export .row .col-md-2 ul li {
-    list-style: none;
-  }
-}
 </style>

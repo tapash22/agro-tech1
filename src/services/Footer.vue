@@ -1,173 +1,172 @@
 <template>
   <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 text">
-          <h3>We <strong>are</strong></h3>
-          <p>
-            Agrotech Global BD Nutrition is a World Class Animal Health Care
-            Solution provider committed to deal with a wide range of world
-            renowned products to market inside the Country through its own
-            Distribution Network.inside the Country through its own Distribution
-            Network.inside the Country through its own Distribution Network.
-          </p>
-        </div>
-        <div class="col-md-4 add">
-          <h3>Get in <strong>touch</strong></h3>
-          <address>
-            Shamol Chya House<br />
-            Road No: 16, Holding No: 28, Rupnagor<br />
-            Mirpur, Dhaka-1216, Bangladesh.
-          </address>
-          <address>
-            <strong> Email :</strong> gvetpharma.gmail.com<br />
-            <strong> Phone :</strong> +8801674345763
-          </address>
-          <!-- <div style="width: 100px; height: 70px;margin-left:80%;">
-            <img style="width:100%;height:100%;" src="../assets/1.jpg" />
-          </div> -->
-        </div>
-           <div class="col-md-4 link">
-          <h3>Quick <strong>link</strong></h3>
-          <ul>
-            <li><router-link to="/home">Home</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
-            <li><router-link to="/products">Products</router-link></li>
-            <li><router-link to="/photos">Gallery</router-link></li>
-            <li><router-link to="/partners">Partners</router-link></li>
-            <li><router-link to="/contact">Login</router-link></li>
-          </ul>
-        </div>
+    <div class="row">
+      <div class="col-md-4 text">
+        <h3>We are</h3>
+        <p>
+          Agrotech Global BD Nutrition is a World Class Animal Health Care
+          Solution provider committed to deal with a wide range of world
+          renowned products to market inside the Country through its own
+          Distribution Network.inside the Country through its own Distribution
+          Network.inside the Country through its own Distribution Network.
+        </p>
+      </div>
+      <div class="col-md-4 add">
+        <h3>Get in touch</h3>
+        <address>
+          Shamol Chya House<br />
+          Road No: 16, Holding No: 28, Rupnagor<br />
+          Mirpur, Dhaka-1216, Bangladesh.
+        </address>
+        <address>
+          <strong> Email :</strong> gvetpharma.gmail.com<br />
+          <strong> Mobile No :</strong> +8801674345763
+        </address>
+      </div>
+      <div class="col-md-4 link">
+        <h3>Quick link</h3>
+        <ul>
+          <li><router-link to="/home">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/products">Products</router-link></li>
+          <li><router-link to="/gallery">Gallery</router-link></li>
+          <li><router-link to="/partners">Partners</router-link></li>
+          <li><router-link to="/login">Login</router-link></li>
+        </ul>
+         <ul>
+          <li>
+            <a href="https://www.facebook.com/"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/"
+              ><i class="fa fa-linkedin" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li><a href="https://www.linkedin.com/company/"
+              ><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </div>
     <div class="bottom">
-      <div class="container">
-        <div class="col-md-8">
-          <p>All right reserved in &copy;UltraWave</p>
-        </div>
-        <div class="col-md-4">
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/"
-                ><i class="fa fa-facebook" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/company/"
-                ><i class="fa fa-linkedin" aria-hidden="true"></i
-              ></a>
-            </li>
-            <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
-          </ul>
-        </div>
-      </div>
+        <p>All right reserved in &copy;UltraWave</p>
     </div>
   </div>
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gideon+Roman&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Merienda:wght@700&family=Montserrat&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;500&family=Romanesco&family=Ubuntu:wght@700&family=Vollkorn:wght@500&display=swap');
+
 .footer {
-  color: #fff;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  background: #1b1b1b;
-  width: 100%;
-  height: 100%;
-}
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 0;
+  position: relative;
 }
 .row {
-  position: relative;
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 10px;
+  justify-content: center;
+  padding:10px;
+  margin: 0;
   background: #1b1b1b;
 }
 .row .col-md-4 {
-  text-align: center;
+  width: 30%;
+  height: 100%;
   padding: 10px;
+  margin: 5px;
+  display: block;
 }
-h3 {
-  font-size: 20px;
-  font-weight: 600;
+.col-md-4 h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
   text-transform: uppercase;
+  font-family: 'Luxurious Roman', cursive;
   letter-spacing: 1px;
-}
-strong {
-  font-size: 22px;
-  font-weight: 500;
-}
-p {
-  text-align: left;
-}
-ul li {
-  list-style: none;
-}
-ul li a {
+  text-align: center;
   color: #fff;
-  text-decoration: none;
 }
-.link {
-  text-align: center;
-}
-
-.link li {
-  padding: 2px;
-  text-align: center;
-}
-.link a {
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  border-bottom: 3px solid green;
-}
-.add address {
-  text-align: left;
-  padding: 0;
-  margin-left: 50px;
-}
-.add strong {
-  font-size: 18px;
-  font-weight: 500;
-}
-.bottom {
-  background: #000;
-  opacity: 0.7;
-  padding-top: 10px;
-  padding: 0;
-}
-.bottom .container {
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  background: #000;
-}
-
-.bottom .col-md-8 p {
-  padding-top: 10px;
-  text-align: center;
-}
-
-.bottom .col-md-4 ul {
-  display: flex;
-  float: right;
-
+.col-md-4 p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: 'Luxurious Roman', cursive;
+  text-align: justify;
   padding: 10px;
+  margin: 0;
+  color: #fff;
 }
-.bottom .col-md-4 li i {
-  font-size: 1.5rem;
+.col-md-4 address{
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Luxurious Roman', cursive;
+  padding: 10px;
+  margin: 5px;
+  color: #fff;
+}
+.col-md-4 ul{
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+}
+ul li{
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+ ul li a{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'Luxurious Roman', cursive;
+  padding:0;
+  margin:0;
+  color: #fff;
+}
+.col-md-4 ul li a{
+  text-decoration: none;
+}
+.col-md-4 ul li a i{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: blue;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+}
+.col-md-4 ul li a i:hover{
+  background: #fff;
+  color: blue;
+}
+
+.footer .bottom{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 10px #fff;
+}
+.bottom p{
+  font-size: 0.8rem;
   font-weight: 500;
-  padding-right: 20px;
+  font-family: 'Luxurious Roman', cursive;
+  color: rgb(212, 212, 212);
 }
-.bottom .col-md-4 li i:hover {
-  color: cyan;
-}
+
 @media only screen and (max-width: 767px) {
   p {
     text-align: left;

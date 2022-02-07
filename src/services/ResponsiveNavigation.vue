@@ -106,92 +106,111 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gideon+Roman&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Merienda:wght@700&family=Montserrat&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;500&family=Romanesco&family=Ubuntu:wght@700&family=Vollkorn:wght@500&display=swap');
+
 .change_color {
   background-color: rgba(255, 255, 255, 0.9);
   color: #fff;
 }
-.header {
+.header{
   width: 100%;
+  height:100%;
   padding: 0;
+  margin:0;
+  position: absolute;
 }
-nav {
-  width: 100%;
+.header nav{
+  width:100%;
+  height: 120px;
+  padding:10px;
+  margin:0;
   display: flex;
-  justify-content: space-between;
-  height: 120px;
-  box-shadow: 2px 2px 3px green;
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  justify-content: space-around;
+  background: #1b1b1b;
+  box-shadow: 0 0 10px #fff;
 }
-.navbar-brand {
-  width: 400px;
-  height: 120px;
+nav a{
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: right;
 }
-img {
+nav a img{
   width: 100%;
   height: 100%;
-  margin-left: 50px;
+  padding: 5px;
+  margin: 5px;
 }
-
-nav > ul {
+nav ul{
+  width: 70%;
+  padding:15px;
+  margin:10px;
   display: flex;
-  right: 0;
+  justify-content: right;
 }
-
-nav > ul > li {
-  display: block;
-  list-style: none;
-  height: 100px;
-  padding-top: 60px;
+nav ul li{
+  padding: 10px;
+  margin: 5px;
+  list-style:none;
 }
-
-nav > ul > li > a {
+nav ul li a{
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Luxurious Roman', cursive;
+  text-align: center;
+  margin:0;
+  padding: 5px;
   text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: green;
-  padding: 20px;
+  color:#fff;
+  border-bottom: 3px none #fff;
 }
-ul li a:hover,
-a.router-link-exact-active {
-  color: #000;
+nav ul li a:hover,
+nav ul li a.router-link-exact-active {
+  border-bottom: 2px solid #fff;
 }
 ul li:hover span {
   display: block;
 }
-span {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: 100px;
+ li span {
   display: none;
-  z-index: 1;
-  background: #fff;
+  position: absolute;
+  padding: 0;
+  margin-left:-20px;
+  margin-top: -5px;
 }
 span ul {
+  width: 100%;
+  height:100%;
   padding: 0;
-  margin: 0;
+  margin:0;
+  display: flex;
+  flex-direction: column;
+    background: #1b1b1b;
 }
-span li {
+span ul li {
   width: 150px;
-  height: 50px;
-  text-align: left;
-  background: rgb(255, 255, 255);
-  cursor: pointer;
-  padding: 10px;
-  list-style: none;
+  height: 60px;
+  padding: 0;
+  margin:0;
+  display: flex;
+  justify-content: center;
 }
 span li a {
   text-decoration: none;
   color: #000;
   font-size: 1.3rem;
   font-weight: 500;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+span ul li a:hover,
+span ul li a.router-link-exact-active {
+  border-bottom: 2px none #fff;
 }
 span li:hover {
-  background: rgba(0, 0, 0, 0.226);
+  background: rgba(0, 0, 0, 0.466);
 }
 @media screen and (max-width: 759px) {
   nav {

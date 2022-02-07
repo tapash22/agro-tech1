@@ -35,7 +35,17 @@
   </div>
 </template>
 
+<script>
+export default {
+    mounted() {
+    window.scrollTo(0, 0);
+  },
+}
+</script>
+
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gideon+Roman&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Merienda:wght@700&family=Montserrat&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;500&family=Romanesco&family=Ubuntu:wght@700&family=Vollkorn:wght@500&display=swap');
+
 .partners {
   width: 100%;
   height: 100%;
@@ -56,6 +66,7 @@ margin: 0;
   text-align: center;
   font-weight: 700;
   font-size: 1.5rem;
+  font-family: 'Luxurious Roman', cursive;
   color: rgb(45, 206, 131);
   text-transform: uppercase;
 }
@@ -72,6 +83,12 @@ margin: 0;
   padding: 14px 80px 18px 36px;
   cursor: pointer;
 }
+.card p{
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
+  text-align: justify;
+}
 
 .card:hover {
   transform: scale(1.05);
@@ -79,7 +96,9 @@ margin: 0;
 }
 
 .card h3 {
+  font-size: 1.5rem;
   font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
 }
 
 .card img {

@@ -34,7 +34,7 @@ export default {
       errors: [],
     };
   },
-  
+
   mounted() {
     window.scrollTo(0, 0);
   },
@@ -43,11 +43,11 @@ export default {
     onLogin() {
       fb.auth()
         .signInWithEmailAndPassword(this.email, this.password)
-        .then(()=>{
-          this.$router.replace('/admin/dashboard');
+        .then(() => {
+          this.$router.replace("/admin/dashboard");
         })
         .catch(function (error) {
-          // Handle Errors here. 
+          // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
           if (errorCode === "auth/wrong-password") {
@@ -63,16 +63,28 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  height: 450px;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gideon+Roman&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Merienda:wght@700&family=Montserrat&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100;500&family=Romanesco&family=Ubuntu:wght@700&family=Vollkorn:wght@500&display=swap');
+
+.login{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+    /* background: rgba(63, 62, 62, 0.952); */
+}
+.login .row {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 }
 .col-md-6 {
-  width: 600px;
-  height: 400px;
-  margin-top: 100px;
-  box-shadow: 5px 5px 5px rgb(62, 62, 141);
+  width: 50%;
+  height: 750px;
+  margin-top: 80px;
+  box-shadow: 0 0 10px blue;
   z-index: 1;
   background: #fff;
   background-image: url("../../assets/login.jpg");
@@ -80,11 +92,12 @@ export default {
   background-size: cover;
 }
 h2 {
-  padding-top: 40px;
+  margin-top: 400px;
   color: #000;
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Luxurious Roman', cursive;
   text-transform: uppercase;
 }
 .msg {
@@ -93,7 +106,10 @@ h2 {
 }
 label {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Luxurious Roman', cursive;
+  padding: 5px;
+  margin: 0;
 }
 .error {
   color: red;

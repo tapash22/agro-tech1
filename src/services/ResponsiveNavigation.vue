@@ -66,7 +66,7 @@ export default {
             },
             {
               url: "aqua",
-              text: "AQua",
+              text: "Aqua",
               child: [
                 { url: "/", text: "Livertonic" },
                 { url: "/", text: "Minerals" },
@@ -78,7 +78,7 @@ export default {
         },
         {
           url: "/gallery",
-          text: "Gallary",
+          text: "Gallery",
         },
         {
           url: "/partners",
@@ -126,7 +126,7 @@ export default {
   margin:0;
   display: flex;
   justify-content: space-around;
-  background: #1b1b1b;
+  background:rgb(35, 2, 58);
   box-shadow: 0 0 10px #fff;
 }
 nav a{

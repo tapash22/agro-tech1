@@ -57,6 +57,7 @@ export default {
   position: relative;
   justify-content: center;
   margin-top: 120px;
+  padding:0;
 }
 
 .sd {

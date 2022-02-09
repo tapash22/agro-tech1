@@ -7,6 +7,10 @@ import Partners from './components/pages/Partners.vue';
 import Login from './components/pages/Login.vue';
 import Client from './components/pages/Client.vue';
 
+import Poultry from "./components/sub-page/Poultry.vue";
+import Ruminent from "./components/sub-page/Ruminent.vue";
+import Aqua from "./components/sub-page/Aqua.vue";
+
 import Admin from './components/pages/Admin.vue';
 import Dashboard from './components/admin_panel/Dashboard.vue';
 import Gallerys from './components/admin_panel/Gallerys.vue';
@@ -16,6 +20,8 @@ import Slider from './components/admin_panel/Slider.vue';
 import User from './components/admin_panel/User.vue';
 import { fb } from './firebase';
 import todo from './components/pages/todo.vue';
+
+
 
 
 const routes = [
@@ -31,6 +37,9 @@ const routes = [
             { path: 'partners', component: Partners },
             { path: 'login', component: Login },
             { path: 'todo', component: todo },
+            { path: 'poultry', component: Poultry },
+            { path: 'ruminent', component: Ruminent },
+            { path: 'aqua', component: Aqua },
         ]
     },
 

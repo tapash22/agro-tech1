@@ -59,7 +59,8 @@ h2 {
     -webkit-background-clip: text; */
   text-align: center;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: "Luxurious Roman", cursive;
   color: rgb(45, 206, 131);
   text-transform: uppercase;
 }

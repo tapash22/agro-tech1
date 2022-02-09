@@ -4,12 +4,12 @@
       <div class="row">
         <div class="col-md-4" v-for="product in products" :key="product.id">
           <router-link :to="product.url">
-          <div class="card">
-            <div class="image">
-              <img :src="product.img" />
+            <div class="card">
+              <div class="image">
+                <img :src="product.img" />
+              </div>
+              <p>{{ product.name }}</p>
             </div>
-            <p>{{product.name}}</p>
-          </div>
           </router-link>
         </div>
       </div>
@@ -22,9 +22,24 @@ export default {
   data() {
     return {
       products: [
-        {id:1, name:'Poultry',url:"/poultry" ,img:require('../../assets/logo.png')},
-        {id:2, name:'Ruminent',url:"/ruminent" ,img:require('../../assets/logo.png')},
-        {id:3, name:'Aqua',url:"/aqua" ,img:require('../../assets/logo.png')},
+        {
+          id: 1,
+          name: "Ruminent",
+          url: "/ruminent",
+          img: require("../../assets/logo.png"),
+        },
+        {
+          id: 2,
+          name: "Ruminent",
+          url: "/ruminent",
+          img: require("../../assets/logo.png"),
+        },
+        {
+          id: 3,
+          name: "Ruminent",
+          url: "/ruminent",
+          img: require("../../assets/logo.png"),
+        },
       ],
     };
   },
@@ -65,10 +80,10 @@ h2 {
   padding: 10px;
   margin: 0;
 }
-.col-md-4 a{
+.col-md-4 a {
   text-decoration: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 .col-md-4 a .card {
   width: 100%;
@@ -98,6 +113,6 @@ h2 {
   justify-content: center; */
   color: #000;
   padding: 10px;
-  margin:0;
+  margin: 0;
 }
 </style>

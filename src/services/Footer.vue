@@ -71,7 +71,7 @@
   justify-content: center;
   padding:10px;
   margin: 0;
-  background: #1b1b1b;
+   background:rgb(35, 2, 58);
 }
 .row .col-md-4 {
   width: 30%;
@@ -159,6 +159,7 @@ ul li{
   display: flex;
   justify-content: center;
   box-shadow: 0 0 10px #fff;
+     background:rgb(35, 2, 58);
 }
 .bottom p{
   font-size: 0.8rem;

@@ -14,12 +14,12 @@
   z-index:99;
   background: linear-gradient(
     to right,
-    rgb(18, 13, 85) 0%,
-    rgb(49, 27, 99) 50%,
+    rgb(35, 2, 58) 0%,
+    rgb(35, 2, 58) 50%,
     #fff 0%,
     #fff 50%,
-    #08ce33 50%,
-    #1eda0d 100%
+    rgba(35, 2, 58, 0.74) 50%,
+    rgba(35, 2, 58, 0.562) 100%
   );
 }
 .text p {

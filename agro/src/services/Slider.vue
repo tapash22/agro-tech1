@@ -67,7 +67,7 @@ export default {
   height: 100%;
 }
 img {
-  height: 700px;
+  height: 500px;
   width: 100%;
   opacity: 1;
   filter: brightness(90%);

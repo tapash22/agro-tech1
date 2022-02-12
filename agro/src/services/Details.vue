@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    <p>"The best doctor in the world is the veterinarian.They can't ask their patients what is the matter they've got to just know.Thanks to all veterinarian."</p>
+    <p>"Quality is foremost vigor"</p>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 .text {
   position: fixed;
   right: 0;
-  width: 100%;
+  width: 50%;
   top: 120px;
   height: 35px;
   z-index:99;
@@ -21,20 +21,19 @@
     rgba(35, 2, 58, 0.74) 50%,
     rgba(35, 2, 58, 0.562) 100%
   );
-  display: inline;
 }
 .text p {
   font-size: 1.2em;
   font-weight: 500;
   color: #fff;
   position: absolute;
-  width: 80%;
+  width: 50%;
   height: 100%;
   margin: 0;
   right: 0;
   text-align: center;
   transform: translateX(100%);
-  animation: text 20s linear infinite;
+  animation: text 9s linear infinite;
 }
 
 @keyframes text {
@@ -76,7 +75,7 @@
     right: 0;
     text-align: center;
     transform: translateX(100%);
-    animation: text 20s linear infinite;
+    animation: text 9s linear infinite;
   }
 
   @keyframes text {

@@ -28,7 +28,7 @@
   font-weight: 500;
   color: #fff;
   position: absolute;
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin: 0;
   right: 0;

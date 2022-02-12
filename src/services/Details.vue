@@ -1,6 +1,6 @@
 <template>
   <div class="text">
-    <p>"The best doctor in the world is the veterinarian.They can't ask their patients what is the matter they've got to just know.Thanks to all veterinarian.Thanks to all veterinarian "</p>
+    <p>"The best doctor in the world is the veterinarian.They can't ask their patients what is the matter they've got to just know.Thanks to all veterinarian."</p>
   </div>
 </template>
 

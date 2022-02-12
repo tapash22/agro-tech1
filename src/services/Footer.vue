@@ -19,8 +19,8 @@
           Mirpur, Dhaka-1216, Bangladesh.
         </address>
         <address>
-          <strong> Email :</strong> gvetpharma.gmail.com<br />
-          <strong> Mobile No :</strong> +8801674345763
+          <strong> Email :</strong> agrotech@gmail.com<br />
+          <strong> Mobile No :</strong> +8801752827682
         </address>
       </div>
       <div class="col-md-4 link">
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="bottom">
-        <p>All right reserved in &copy;UltraWave</p>
+        <p>All right reserved in &copy;UltraWave.Digital</p>
     </div>
   </div>
 </template>

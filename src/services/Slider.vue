@@ -14,11 +14,8 @@ export default {
   data() {
     return {
       images: [
-        "https://i.postimg.cc/sXwpMmD2/1.jpg",
-        "https://i.postimg.cc/MKh1fvx1/3.jpg",
-        "https://i.postimg.cc/L5JZnMby/2.jpg",
-        "https://i.postimg.cc/RVnHm4fh/4.jpg",
-        "https://i.postimg.cc/8zmB8TQW/5.jpg",
+        "https://i.postimg.cc/XNmp1cyL/Doctors-term-2.jpg",
+        "https://i.postimg.cc/cLN60xh8/Doctors-term.jpg"
       ],
       timer: null,
       currentIndex: 0,
@@ -67,7 +64,7 @@ export default {
   height: 100%;
 }
 img {
-  height: 700px;
+  height: 600px;
   width: 100%;
   opacity: 1;
   filter: brightness(90%);
